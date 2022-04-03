@@ -1,0 +1,54 @@
+Amiga Magazine Rack v0.1a
+©2022 Paul Vince (MrV2k)
+=========================
+
+About
+-----
+
+Amiga Magazine Rack is a small PDF reader geared towards the Commodore Amiga magazine collection (though it will open any PDF file). The only real difference from a normal PDF reader is that it can load a splash screen for each folder of magazines.
+
+I have created some packs of the popular Amiga magazines for use with Amiga Magazine Rack. The PDF's included were sourced from DHL's collection on Bombjack.org and RetroPDFs collection on Wordpress. All credit for the scans go to them and please support them if you can. Links are on the 'Help' menu in Amiga Magazine Rack. All I have done is collate the PDF's and recompress a few of the larger scans to make them more download friendly.
+
+Requirements
+------------
+Internet Explorer 4.0 or later
+PDF browser plugin installed (Adobe Acrobat, Foxit Pro etc...)
+7Zip / WinRar to extract magazine packs
+
+Usage
+-----
+Amiga Magazine Rack is small and completely self contained. To view files, just click the PDF in list on the left and the PDF will open in the panel on the right. If you get asked to open the PDF in an external application, then you will need to install a browser based PDF viewer.
+
+I have packaged up a set of magazines for the Commodore Amiga, but Amiga Magazine Rack will support any PDF file as long as it is stored the right way.
+
+File Structure
+--------------
+
+Root Folder
+|
+Coverdisks 		- A folder for coverdisk disk images
+|
+Magazine_Data 	- JPEG images used for splash screen. Files need to be named the same as the 
+|		    	magazine folder (e.g "Amiga Format.jpg" for Amiga Format folder)
+|
+Magazines 		- The PDF's for each magazine need to be in a separate folder to be scanned
+	   		properly into the file tree. e.g.
+			
+			Amiga Format
+				- Amiga Format 1.pdf
+				- Amiga Format 2.pdf
+
+Installing Magazine Packs
+-------------------------
+
+Download the magazine pack archive file. Open the magazine pack archive in 7Zip / WinRar and drag the folders into your Amiga Magazine Rack Folder. Run Amiga Magazine Rack. The program will automatically scan the magazines folder for any PDF's
+
+Coverdisks
+----------
+
+Amiga Magazine Rack will open the coverdisks folder from the 'File' menu. The coverdisk files are compressed in 7Zip format to save space. The Amiga emulator WinUAE supports files archived in 7Zip so there is no need to extract the disk images. Other emulators may require you to extract the disk images.
+
+History
+-------
+
+V0.1a - Initial Release
