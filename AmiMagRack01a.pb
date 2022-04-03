@@ -183,7 +183,12 @@ Procedure Draw_Main_Window()
   MenuBar()
   MenuItem(1,"Exit")
   MenuTitle("Help")
-  MenuItem(2,"About")
+  MenuItem(2,"Help")
+  MenuItem(3,"About")
+  OpenSubMenu("Original PDF Sources")
+  MenuItem(4,"DHL's Commodore Archive")
+  MenuItem(5,"RetroPDFs")
+  CloseSubMenu()
   
   WindowBounds(#MAIN_WINDOW,800,700,#PB_Ignore,#PB_Ignore)
   
@@ -216,6 +221,8 @@ Procedure Draw_Main_Window()
     EndIf
     old_folder=StringField(Magazine_List(),count,"\")
   Next
+  
+  AddGadgetItem(#MAGAZINE_TREE,-1,"Amiga Magazine Rack",0,0)
   
   ForEach Mag_List()
     AddGadgetItem(#MAGAZINE_TREE,-1,Mag_List()\Mag_Title,0,0)
@@ -254,7 +261,17 @@ Repeat
           End
           
         Case 2
+          RunProgram("Help.txt")
+          
+        Case 3
           MessageRequester("About","Amiga Magazine Rack"+Chr(13)+Chr(13)+"Version "+Version+Chr(13)+Chr(13)+"© 2022 Paul Vince (MrV2K)",#PB_MessageRequester_Info)
+          
+        Case 4
+          RunProgram("https://commodore.bombjack.org/amiga/amiga-magazines.htm")
+          
+        Case 5
+          RunProgram("https://retropdfs.wordpress.com/")
+            
           
       EndSelect
       
@@ -296,10 +313,10 @@ ForEver
     
 End
 
-; IDE Options = PureBasic 6.00 Beta 5 (Windows - x64)
-; CursorPosition = 256
-; FirstLine = 75
-; Folding = A9
+; IDE Options = PureBasic 6.00 Beta 6 (Windows - x64)
+; CursorPosition = 224
+; FirstLine = 99
+; Folding = B+
 ; Optimizer
 ; EnableXP
 ; DPIAware
